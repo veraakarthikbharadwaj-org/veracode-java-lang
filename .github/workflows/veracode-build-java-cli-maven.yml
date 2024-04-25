@@ -1,5 +1,4 @@
-name: Veracode Build Application using CLI
-
+name: Veracode Build Java Maven Application
 on:
   workflow_call:
     inputs:
@@ -12,7 +11,6 @@ on:
       token:
         required: true
         type: string
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,7 +25,7 @@ jobs:
         path: 'veracode-helper'
     - uses: actions/setup-java@v4
       with:
-        java-version: 21
+        java-version: 17
         distribution: oracle
     - name: Cache Maven Dependencies
       uses: actions/cache@v4
