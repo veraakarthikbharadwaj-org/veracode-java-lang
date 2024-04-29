@@ -1,4 +1,4 @@
-name: Veracode Build Scala Application
+name: Veracode Build Swift Application
 
 on:
   workflow_call:
@@ -27,10 +27,7 @@ jobs:
       with:
         path: 'veracode-helper'
 
-    - uses: actions/setup-java@v4
-      with:
-        java-version: 21
-        distribution: oracle
+    - uses: swift-actions/setup-swift@v2
 
     - name: Package the application
       env:
