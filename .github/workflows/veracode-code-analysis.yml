@@ -27,8 +27,15 @@ on:
       - php-policy-scan
       - scala-pipeline-scan
       - scala-policy-scan
+      - scala-sandbox-scan
       - dart-pipeline-scan
       - dart-policy-sca
+      - python-pipeline-scan
+      - python-policy-scan
+      - python-sandbox-scan
+      - swift-pipeline-scan
+      - swift-policy-scan
+      - swift-sandbox-scan
 
 jobs:
   register:
