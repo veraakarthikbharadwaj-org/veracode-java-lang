@@ -36,6 +36,9 @@ on:
       - swift-pipeline-scan
       - swift-policy-scan
       - swift-sandbox-scan
+      - ruby-pipeline-scan
+      - ruby-policy-scan
+      - ruby-sandbox-scan
 
 jobs:
   register:
