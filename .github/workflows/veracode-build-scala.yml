@@ -32,6 +32,10 @@ jobs:
         distribution: 'oracle'
         java-version: '21'
 
+    - name: Install sbt
+      run: |
+        sudo apt-get install sbt
+
     - name: Package the application
       env:
         VERACODE_API_KEY_ID: '${{ secrets.VERACODE_API_ID }}'
