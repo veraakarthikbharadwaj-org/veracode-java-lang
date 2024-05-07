@@ -31,7 +31,6 @@ jobs:
       with:
         distribution: 'oracle'
         java-version: '21'
-        cache: 'sbt'
 
     - name: Package the application
       env:
