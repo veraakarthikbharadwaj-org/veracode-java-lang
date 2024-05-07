@@ -29,10 +29,9 @@ jobs:
 
     - uses: actions/setup-java@v4
       with:
-        java-version: 21
-        distribution: oracle
-
-    - uses: olafurpg/setup-scala@v14
+        distribution: 'temurin'
+        java-version: '21'
+        cache: 'sbt'
 
     - name: Package the application
       env:
