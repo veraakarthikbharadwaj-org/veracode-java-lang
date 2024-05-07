@@ -34,8 +34,7 @@ jobs:
         cache: 'sbt'
 
     - name: Check sbt version
-      run: |
-        sbt sbtVersion
+      run: sbt
 
     - name: Package the application
       env:
