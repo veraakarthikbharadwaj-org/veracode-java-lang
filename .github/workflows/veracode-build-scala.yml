@@ -32,7 +32,7 @@ jobs:
         java-version: 21
         distribution: oracle
 
-    - uses: olafurpg/setup-scala@v11
+    - uses: olafurpg/setup-scala@v14
 
     - name: Package the application
       env:
