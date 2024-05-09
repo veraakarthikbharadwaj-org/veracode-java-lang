@@ -17,6 +17,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: node and npm version
+      run: |
+        echo "Lets find our NODE"
+        node -v
+        echo "Lets find our NPM"
+        npm -v
+        echo "Lets find our PHP"
+        php -v
+        echo "Lets find our PIP"
+        pip3
+      
     - uses: actions/checkout@v4
       with:
         repository: ${{ inputs.repository }}
