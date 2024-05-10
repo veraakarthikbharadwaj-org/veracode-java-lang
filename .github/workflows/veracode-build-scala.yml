@@ -17,19 +17,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: node and npm version
-      run: |
-        echo "Lets find our NODE"
-        node -v
-        echo "Lets find our NPM"
-        npm -v
-        echo "Lets find our PHP"
-        php -v
-        echo "Lets find our PIP"
-        pip3 --version
-        echo "Lets find our Composer"
-        composer --version
-      
     - uses: actions/checkout@v4
       with:
         repository: ${{ inputs.repository }}
@@ -45,9 +32,7 @@ jobs:
         distribution: 'oracle'
         java-version: '17'
 
-    - uses: coursier/setup-action@v1
-      with:
-        apps: sbtn bloop ammonite
+    - uses: olafurpg/setup-scala@v11
 
     - name: Package the application
       env:
