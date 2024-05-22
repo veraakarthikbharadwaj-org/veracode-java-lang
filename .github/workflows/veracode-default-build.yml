@@ -47,7 +47,7 @@ jobs:
         cd $cliFileName
         chmod +x install.sh
         ./install.sh system
-        cd -
+        cd /__w/veracode/veracode
         veracode package --source . --output veracode-artifacts --trust
         zip veracode-artifact.zip veracode-artifacts/* -x .zip .tar .tar.gz .gz
 
