@@ -50,8 +50,9 @@ jobs:
         cd /__w/veracode/veracode
         veracode package --source . --output veracode-artifacts --trust
         zip veracode-artifact.zip veracode-artifacts/* -x .zip .tar .tar.gz .gz
+        ls -l
 
     - uses: actions/upload-artifact@v4
       with:
         name: veracode-artifact
-        path: veracode-artifact.zip
+        path: /__w/veracode/veracode/veracode-artifact.zip
