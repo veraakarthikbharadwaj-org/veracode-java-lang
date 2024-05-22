@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: acckarthikbharadwaj/java-maven-gradle:latest
+      credentials:
+        username: acckarthikbharadwaj
+        password: ${{ secrets.DOCKER_HUB_SECRET }}
       volumes:
         - $PWD:/home/luser
 
