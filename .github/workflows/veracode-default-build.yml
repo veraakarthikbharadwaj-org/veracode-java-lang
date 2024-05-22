@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: acckarthikbharadwaj/java-maven-gradle:latest
-
+    env:
+      VERACODE_API_KEY_ID: '${{ secrets.VERACODE_API_ID }}'
+      VERACODE_API_KEY_SECRET: '${{ secrets.VERACODE_API_KEY }}'
     steps:
     - uses: actions/checkout@v4
       with:
