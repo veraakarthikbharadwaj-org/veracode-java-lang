@@ -38,6 +38,7 @@ on:
       - ruby-pipeline-scan
       - ruby-policy-scan
       - ruby-sandbox-scan
+      - unknown-language
 
 jobs:
   register:
