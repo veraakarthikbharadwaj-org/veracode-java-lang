@@ -18,7 +18,7 @@ on:
   
 jobs:
   build:
-    if: ${{ inputs.event_name == 'java-pipeline-scan' || inputs.event_name == 'java-policy-scan' || inputs.event_name == 'java-sandbox-scan' }}
+    if: ${{ inputs.event_name == 'java-pipeline-scan' || inputs.event_name == 'java-policy-scan' || inputs.event_name == 'java-sandbox-scan' || inputs.event_name == 'unknown-language-pipeline-scan' || inputs.event_name == 'unknown-language-policy-scan' || inputs.event_name == 'unknown-language-sandbox-scan' }}
     uses: ./.github/workflows/veracode-default-build.yml
     with:
       repository: ${{ inputs.repository }}
