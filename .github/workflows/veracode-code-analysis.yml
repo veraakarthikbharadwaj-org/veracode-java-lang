@@ -38,7 +38,9 @@ on:
       - ruby-pipeline-scan
       - ruby-policy-scan
       - ruby-sandbox-scan
-      - unknown-language
+      - unknown-language-pipeline-scan
+      - unknown-language-policy-scan
+      - unknown-language-sandbox-scan
 
 jobs:
   register:
