@@ -38,11 +38,12 @@ jobs:
         cd veracode-helper/helper/cli
         cliFile=$(ls -1 . | head -n 1)
         cliFileName=$(echo "$cliFile" | cut -c 1-$((${#cliFile}-7)))
-        tar -zxvf $cliFile
+        tar -zxvf veracode-helper/helper/cli/$cliFile
         cd $cliFileName
-        chmod +x install.sh
-        ./install.sh system
-        cd /__w/veracode/veracode
+        export PATH="veracode-helper/helper/cli/$cliFileName:$PATH"
+        # chmod +x install.sh
+        # ./install.sh system
+        cd /home/luser/veracode/veracode
         veracode package --source . --output veracode-artifacts --trust
         zip veracode-artifact.zip veracode-artifacts/* -x .zip .tar .tar.gz .gz
         ls -l
@@ -50,4 +51,4 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: veracode-artifact
-        path: /__w/veracode/veracode/veracode-artifact.zip
+        path: veracode/veracode-artifact.zip
